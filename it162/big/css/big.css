@@ -1,0 +1,173 @@
+/* My BIG Website Styles */
+
+html {
+    background-color: #ECE8F2;
+}
+
+main.wrapper {
+    background-color: #F8F2FF;
+    overflow:auto;
+    border-radius: 18px;
+}
+
+h1>a {
+    font-family: 'Trebuchet MS';
+    text-decoration: none;
+    color: rgb(56, 48, 55);
+}
+
+h2, h3, p {
+    font-family: 'Trebuchet MS';
+    color:rgb(31, 31, 31);
+}
+
+ul, dl {
+    font-family: 'Trebuchet MS';
+}
+
+.citation {
+    font-size: 14px;
+}
+
+
+.logo {
+    color: rgb(56, 48, 55);
+    margin-left:1%;
+    text-shadow:1px 1px #ccc;
+    font-size:1.25em;
+}
+
+/* Embed Responsively Rules! */
+div.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: auto;
+    max-width: 98%;
+} 
+
+div.embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* HIDE AGENDA VIEW CALENDAR */
+
+.embed-container.agenda-view{
+    display:none;
+}
+
+
+footer {
+    padding:1em;
+    text-align:center;
+    clear:both;
+}
+
+footer {
+    padding-top: 3em;
+	clear:both;
+    text-align: center;
+}
+
+/* START RESPONSIVE STYLES */
+
+/* DESKTOP */
+@media all and (min-width:1400px) {
+	
+   main.wrapper {
+		width:80%;
+		margin:auto;
+        padding:1em;
+	}
+
+    section {
+		width:63%;
+		float:left;
+	}
+	
+     aside {	
+		width:34%;
+		float:right;
+	}
+			
+    img.desktop {
+       		width:50%;
+            display:inline-block;
+    }
+    
+    img.tablet, img.phone {
+       	display:none;
+    	}  
+    
+    /* Change background color of navigation on selected page */
+    ul.topnav li a.selected {
+        		background-color: rgb(214, 206, 213);
+        		color:rgb(56, 48, 55);
+   	 }
+}
+
+
+/* TABLET */
+@media all and (min-width:737px) and (max-width:1399px) {
+	
+	section {
+		width:60%;
+		float:left;
+	}
+	
+	aside {	
+		width:39%;
+		float:right;
+	}
+	
+    img.tablet {
+       		width:100%;
+            display:inline-block;
+    }
+    
+    img.desktop, img.phone {
+       	display:none;
+    	}  
+    
+    
+    /* Change background color of navigation on selected page */
+    ul.topnav li a.selected {
+        background-color: #ccc;
+        color:#000;
+    }
+}
+
+/* CALENDAR RULES FOR PHONE */
+
+@media all and (max-width:1440px) {
+    
+    /* SHOW AGENDA VIEW CALENDAR */
+    div.embed-container.agenda-view{
+        display:block;
+    }
+    
+    /* HIDE AGENDA VIEW CALENDAR */
+    div.embed-container.month-view{
+        display:none;
+    }
+}
+
+/* PHONE */
+@media all and (max-width:736px) {
+    
+    img.phone {
+       		width:100%;
+            display:inline-block;
+    }
+    
+    img.tablet, img.desktop {
+       	display:none;
+    	}  
+
+}
+
